@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* Diseño General */
+body 
+/* Estilo para las tarjetas de personajes */
+.character-card {
+  width: 30%;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
+}
+
+.know-more-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.know-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el formulario emergente */
+.character-form {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Fondo oscuro para deshabilitar la parte detrás del formulario */
+.character-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
+body
+{
+  background-image: url(rickymorty\ \(1\).jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+
+
+{
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #282828;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Tarjetas de personajes */
+  .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .character-card {
+    background-color: #fff;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+  }
+  
+  .character-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .character-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .character-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .character-card p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  footer {
+    background-color: #282828;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

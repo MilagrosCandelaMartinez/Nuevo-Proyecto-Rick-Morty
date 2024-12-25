@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick & Morty Characters</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <body>
+    </html>
+    ***
+      
+      <!-- Formulario que se muestra al hacer clic en el botón -->
+      <div class="character-form" id="form-4" style="display: none;">
+        <form action="#" method="POST">
+          <h3>Más Información sobre Jerry Smith</h3>
+          <label for="status">Estado:</label>
+          <input type="text" id="status" name="status" value="Vivo" disabled>
+          <br>
+          <label for="species">Especie:</label>
+          <input type="text" id="species" name="species" value="Humano" disabled>
+          <br>
+          <label for="origin">Origen:</label>
+          <input type="text" id="origin" name="origin" value="Tierra (Dimensión de reemplazo)" disabled>
+          <br>
+          <label for="gender">Género:</label>
+          <input type="text" id="gender" name="gender" value="Masculino" disabled>
+          <br><br>
+          <button type="button" onclick="toggleForm(4)">Cerrar</button>
+        </form>
+      </div>
+    </div>    
+
+  <title>Formulario de Contacto</title>********
+  <link rel="stylesheet" href="styles.css"> <!-- Tu archivo CSS -->
+</head>
+<body>
+  
+  <a class="btn-a" href="a">Personajes</a>
+  <a class="btn-a" href="a">Contacto</a>
+
+  <p>Déjanos tus datos para que podamos contactarte:</p>
+  
+  <form id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required><br><br>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" required><br><br>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" required></textarea><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="script.js"></script> 
+ 
+    <!-- Header -->
+    <header>
+      <h1>Rick y Morty</h1>
+    </header>
+  
+    <!-- Main Content -->
+    <main>
+      <div id="character-list" class="character-list">
+        <!-- Aquí se cargarán los personajes desde JavaScript -->
+      </div>
+    </main>
+  
+    <!-- Contenedor de las tarjetas -->
+    <div class="card-container">
+      
+      <!-- Tarjeta de un personaje -->
+      <div class="character-card">
+        <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick" class="character-image">
+        <h3>Rick Sanchez</h3>
+        <button class="know-more-btn" onclick="toggleInfo(0)">Know More</button>
+        <div class="character-info" id="info-0" style="display: none;">
+          <p>Estado del personaje: vivo</p>
+          <p>Especies: Humano</p>
+          <p>Origen: Tierra (C-137)</p>
+          <p>Género: Masculino</p>
+        </div>
+      </div>
+  
+      <!-- Otra tarjeta de personaje -->
+      <div class="character-card">
+        <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Morty" class="character-image">
+        <h3>Morty Smith</h3>
+        <button class="know-more-btn" onclick="toggleInfo(1)">Know More</button>
+        <div class="character-info" id="info-1" style="display: none;">
+          <p>Estado del personaje: vivo</p>
+          <p>Especies: Humano</p>
+          <p>Origen: Tierra (Dimensión de reemplazo)</p>
+          <p>Género: Masculino</p>
+        </div>
+      </div>
+  
+      <!-- Otra tarjeta de personaje -->
+      <div class="character-card">
+        <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Summer Smith" class="character-image">
+        <h3>Verano Smith</h3>
+        <button class="know-more-btn" onclick="toggleInfo(2)">Know More</button>
+        <div class="character-info" id="info-2" style="display: none;">
+          <p>Estado del personaje: vivo</p>
+          <p>Especies: Humano</p>
+          <p>Origen: Tierra (Dimensión de reemplazo)</p>
+          <p>Género: Femenino</p>
+        </div>
+      </div>
+  
+      <!-- Otra tarjeta de personaje -->
+      <div class="character-card">
+        <img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Beth Smith" class="character-image">
+        <h3>Beth Smith</h3>
+        <button class="know-more-btn" onclick="toggleInfo(3)">Know More</button>
+        <div class="character-info" id="info-3" style="display: none;">
+          <p>Estado del personaje: vivo</p>
+          <p>Especies: Humano</p>
+          <p>Origen: Tierra (Dimensión de reemplazo)</p>
+          <p>Género: Femenino</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Cargando el archivo JavaScript -->
+    <script src="script.js"></script>
+  
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+  <div class="character-card">
+    <img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" alt="Jerry Smith" class="character-image">
+    <h4>Jerry Smith</h4>
+    <button class="know-more-btn" onclick="toggleInfo(4)">Know More</button>
+    <div class="character-info" id="info-4" style="display: none;">
+      <p>Estado del personaje: vivo</p>
+      <p>Especies: Humano</p>
+      <p>Origen: Tierra (Dimensión de reemplazo)</p>
+      <p>Género: Masculino</p>
+    </div>
+  </div>
+  
+    <div class="character-card">
+      <img src="https://rickandmortyapi.com/api/character/avatar/6.jpeg" alt="Princesa del Grupo Abadango" class="character-image">
+      <h4>Princesa del Grupo Abadango</h4>
+      <button class="know-more-btn" onclick="toggleInfo(4)">Know More</button>
+      
+      <!-- Información oculta que se mostrará/ocultará -->
+      <div class="character-info" id="info-4" style="display: none;">
+        <p>Estado del personaje vivo</p>
+        <p>Especies</p>
+        <p>Extranjero</p>
+        <p>Origen</p>
+        <p>Abadango</p>
+        <p>Género</p>
+        <p>Femenino</p>
+      </div>
+    </div>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+    <div class="character-card">
+      <img src="https://rickandmortyapi.com/api/character/avatar/7.jpeg" alt="Abradolf Lincler" class="character-image">
+      <h4>Abradolf Lincler</h4>
+      <button class="know-more-btn" onclick="toggleInfo(5)">Know More</button>
+      
+      <!-- Información oculta que se mostrará/ocultará -->
+      <div class="character-info" id="info-5" style="display: none;">
+        <p>Estado del personaje desconocido</p>
+        <p>Especies</p>
+        <p>Humano</p>
+        <p>Origen</p>
+        <p>Tierra (Dimensión de reemplazo)</p>
+        <p>Género</p>
+        <p>Masculino</p>
+      </div>
+    </div>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+    <div class="character-card">
+      <img src="https://rickandmortyapi.com/api/character/avatar/8.jpeg" alt="El Adjudicador Rick" class="character-image">
+      <h4>El Adjudicador Rick</h4>
+      <button class="know-more-btn" onclick="toggleInfo(6)">Know More</button>
+      
+      <!-- Información oculta que se mostrará/ocultará -->
+      <div class="character-info" id="info-6" style="display: none;">
+        <p>Estado del personaje muerto</p>
+        <p>Especies</p>
+        <p>Humano</p>
+        <p>Origen</p>
+        <p>desconocido</p>
+        <p>Género</p>
+        <p>Masculino</p>
+      </div>
+    </div>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+    <div class="character-card">
+      <img src="https://rickandmortyapi.com/api/character/avatar/9.jpeg" alt="Director de la Agencia" class="character-image">
+      <h4>Director de la Agencia</h4>
+      <button class="know-more-btn" onclick="toggleInfo(7)">Know More</button>
+      
+      <!-- Información oculta que se mostrará/ocultará -->
+      <div class="character-info" id="info-7" style="display: none;">
+        <p>Estado del personaje muerto</p>
+        <p>Especies</p>
+        <p>Humano</p>
+        <p>Origen</p>
+        <p>Tierra (Dimensión de reemplazo)</p>
+        <p>Género</p>
+        <p>Masculino</p>
+      </div>
+    </div>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+    <div class="character-card">
+      <img src="https://rickandmortyapi.com/api/character/avatar/11.jpeg" alt="Alan Rieles" class="character-image">
+      <h4>Alan Rieles</h4>
+      <button class="know-more-btn" onclick="toggleInfo(8)">Know More</button>
+      
+      <!-- Información oculta que se mostrará/ocultará -->
+      <div class="character-info" id="info-8" style="display: none;">
+        <p>Estado del personaje muerto</p>
+        <p>Especies</p>
+        <p>Humano</p>
+        <p>Origen</p>
+        <p>desconocido</p>
+        <p>Género</p>
+        <p>Masculino</p>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+    <div class="character-card">
+      <img src="https://rickandmortyapi.com/api/character/avatar/12.jpeg" alt="Alejandro" class="character-image">
+      <h4>Alejandro</h4>
+      <button class="know-more-btn" onclick="toggleInfo(9)">Know More</button>
+      
+      <!-- Información oculta que se mostrará/ocultará -->
+      <div class="character-info" id="info-9" style="display: none;">
+        <p>Estado del personaje muerto</p>
+        <p>Especies</p>
+        <p>Humano</p>
+        <p>Origen</p>
+        <p>Tierra (C-137)</p>
+        <p>Género</p>
+        <p>Masculino</p>
+      </div>
+    </div>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+    <div class="character-card">
+      <img src="https://rickandmortyapi.com/api/character/avatar/20.jpeg" alt="Googah" class="character-image">
+      <h4>Googah</h4>
+      <button class="know-more-btn" onclick="toggleInfo(10)">Know More</button>
+      
+      <!-- Información oculta que se mostrará/ocultará -->
+      <div class="character-info" id="info-10" style="display: none;">
+      <p>Estado del personaje desconocido</p>
+      <p>Especies</p>
+      <p>Extranjero</p>
+      <p>Origen</p>
+      <p>desconocido</p>
+      <p>Género</p>
+      <p>desconocido</p>
+      </div>
+    </div>
+    
+    <script>
+      // Función para mostrar/ocultar la información adicional
+      function toggleInfo(index) {
+        var info = document.getElementById("info-" + index);
+        
+        // Si la información está oculta, se muestra, y si está visible, se oculta
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
+      }
+    </script>
+
+    <div class="character-card">
+  <img src="https://rickandmortyapi.com/api/character/avatar/21.jpeg" alt="Morty Extraterrestre" class="character-image">
+  <h4>Morty Extraterrestre</h4>
+  <button class="know-more-btn" onclick="toggleInfo(11)">Know More</button>
+  
+  <!-- Información oculta que se mostrará/ocultará -->
+  <div class="character-info" id="info-11" style="display: none;">
+    <p>Estado del personaje desconocido</p>
+    <p>Especies</p>
+    <p>Extranjero</p>
+    <p>Origen</p>
+    <p>desconocido</p>
+    <p>Género</p>
+    <p>Masculino</p>
+  </div>
+</div>
+
+<script>
+  // Función para mostrar/ocultar la información adicional
+  function toggleInfo(index) {
+    var info = document.getElementById("info-" + index);
+    
+    // Si la información está oculta, se muestra, y si está visible, se oculta
+    if (info.style.display === "none" || info.style.display === "") {
+      info.style.display = "block";
+    } else {
+      info.style.display = "none";
+    }
+  }
+</script>
+<div class="character-card">
+  <img src="https://rickandmortyapi.com/api/character/avatar/22.jpeg" alt="Rick Extraterrestre" class="character-image">
+  <h4>Rick Extraterrestre</h4>
+  <button class="know-more-btn" onclick="toggleInfo(12)">Know More</button>
+  
+  <!-- Información oculta que se mostrará/ocultará -->
+  <div class="character-info" id="info-12" style="display: none;">
+  <p>Estado del personaje desconocido</p>
+  <p>Especies</p>
+  <p>Extranjero</p>
+  <p>Origen</p>
+  <p>desconocido</p>
+  <p>Género</p>
+  <p>Masculino</p>
+  </div>
+</div>
+
+<script>
+  // Función para mostrar/ocultar la información adicional
+  function toggleInfo(index) {
+    var info = document.getElementById("info-" + index);
+    
+    // Si la información está oculta, se muestra, y si está visible, se oculta
+    if (info.style.display === "none" || info.style.display === "") {
+      info.style.display = "block";
+    } else {
+      info.style.display = "none";
+    }
+  }
+</script>
+<div class="character-card">
+  <img src="https://rickandmortyapi.com/api/character/avatar/23.jpeg" alt="Ciborg Amish" class="character-image">
+  <h4>Ciborg Amish</h4>
+  <button class="know-more-btn" onclick="toggleInfo(13)">Know More</button>
+  
+  <!-- Información oculta que se mostrará/ocultará -->
+  <div class="character-info" id="info-13" style="display: none;">
+   <p>Estado del personaje muerto</p> 
+   <p>Especies</p>
+   <p>Extranjero</p>
+   <p>Origen</p>
+   <p>desconocido</p>
+   <p>Género</p>
+   <p>Masculino</p>
+</div>
+
+<script>
+  // Función para mostrar/ocultar la información adicional
+  function toggleInfo(index) {
+    var info = document.getElementById("info-" + index);
+    
+    // Si la información está oculta, se muestra, y si está visible, se oculta
+    if (info.style.display === "none" || info.style.display === "") {
+      info.style.display = "block";
+    } else {
+      info.style.display = "none";
+    }
+  }
+</script>
+<div class="character-card">
+  <img src="https://rickandmortyapi.com/api/character/avatar/24.jpeg" alt="Annie" class="character-image">
+  <h4>Annie</h4>
+  <button class="know-more-btn" onclick="toggleInfo(14)">Know More</button>
+  
+  <!-- Información oculta que se mostrará/ocultará -->
+  <div class="character-info" id="info-14" style="display: none;">
+
+    <p>Estado del personaje vivo</p>
+    <p>Especies</p>
+    <p>Humano</p>
+    <p>Origen</p>
+    <p>Tierra (C-137)</p>
+    <p>Género</p>
+    <p>Femenino</p>
+  </div>
+</div>
+
+<script>
+  // Función para mostrar/ocultar la información adicional
+  function toggleInfo(index) {
+    var info = document.getElementById("info-" + index);
+    
+    // Si la información está oculta, se muestra, y si está visible, se oculta
+    if (info.style.display === "none" || info.style.display === "") {
+      info.style.display = "block";
+    } else {
+      info.style.display = "none";
+    }
+  }
+</script>
+<div class="character-card">
+  <img src="https://rickandmortyapi.com/api/character/avatar/25.jpeg" alt="Antena Morty" class="character-image">
+  <h4>Antena Morty</h4>
+  <button class="know-more-btn" onclick="toggleInfo(15)">Know More</button>
+  
+  <!-- Información oculta que se mostrará/ocultará -->
+  <div class="character-info" id="info-15" style="display: none;">
+    <p> Estado del personaje vivo</p>
+    <p>Especies</p>
+    <p>Humano</p>
+    <p>Origen</p>
+    <p>desconocido</p>
+    <p>Género</p>
+    <p>Masculino</p>
+  </div>
+</div>
+
+<script>
+  // Función para mostrar/ocultar la información adicional
+  function toggleInfo(index) {
+    var info = document.getElementById("info-" + index);
+    
+    // Si la información está oculta, se muestra, y si está visible, se oculta
+    if (info.style.display === "none" || info.style.display === "") {
+      info.style.display = "block";
+    } else {
+      info.style.display = "none";
+    }
+  }
+</script>
+<div class="character-card">
+  <img src="https://rickandmortyapi.com/api/character/avatar/26.jpeg" alt="Antena Rick" class="character-image">
+  <h4>Antena Rick</h4>
+  <button class="know-more-btn" onclick="toggleInfo(16)">Know More</button>
+  
+  <!-- Información oculta que se mostrará/ocultará -->
+  <div class="character-info" id="info-16" style="display: none;">
+    <p>Estado del personaje desconocido</p>
+    <p>Especies</p>
+    <p>Humano</p>
+    <p>Origen</p>
+    <p>desconocido</p>
+    <p>Género</p>
+    <p>Masculino</p>
+</div>
+</div>
+
+<script>
+  // Función para mostrar/ocultar la información adicional
+  function toggleInfo(index) {
+    var info = document.getElementById("info-" + index);
+    
+    // Si la información está oculta, se muestra, y si está visible, se oculta
+    if (info.style.display === "none" || info.style.display === "") {
+      info.style.display = "block";
+    } else {
+      info.style.display = "none";
+    }
+  }
+</script>
+<div class="character-card">
+  <img src="https://rickandmortyapi.com/api/character/avatar/27.jpeg" alt="Hormigas en mis ojos Johnson" class="character-image">
+  <h4>Hormigas en mis ojos Johnson</h4>
+  <button class="know-more-btn" onclick="toggleInfo(17)">Know More</button>
+  
+  <!-- Información oculta que se mostrará/ocultará -->
+  <div class="character-info" id="info-17" style="display: none;">
+    <p>Estado del personaje desconocido</p>
+    <p>Especies</p>
+    <p>Humano</p>
+    <p>Origen</p>
+    <p>desconocido</p>
+    <p>Género</p>
+    <p>Masculino</p>
+
+  </div>
+</div>
+
+<script>
+  // Función para mostrar/ocultar la información adicional
+  function toggleInfo(index) {
+    var info = document.getElementById("info-" + index);
+    
+    // Si la información está oculta, se muestra, y si está visible, se oculta
+    if (info.style.display === "none" || info.style.display === "") {
+      info.style.display = "block";
+    } else {
+      info.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
