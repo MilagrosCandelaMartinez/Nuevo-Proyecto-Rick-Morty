@@ -8,61 +8,69 @@
 </head>
 
 <body>
-  <body>
-    </html>
-    ***
-      
-      <!-- Formulario que se muestra al hacer clic en el botón -->
-      <div class="character-form" id="form-4" style="display: none;">
-        <form action="#" method="POST">
-          <h3>Más Información sobre Jerry Smith</h3>
-          <label for="status">Estado:</label>
-          <input type="text" id="status" name="status" value="Vivo" disabled>
-          <br>
-          <label for="species">Especie:</label>
-          <input type="text" id="species" name="species" value="Humano" disabled>
-          <br>
-          <label for="origin">Origen:</label>
-          <input type="text" id="origin" name="origin" value="Tierra (Dimensión de reemplazo)" disabled>
-          <br>
-          <label for="gender">Género:</label>
-          <input type="text" id="gender" name="gender" value="Masculino" disabled>
-          <br><br>
-          <button type="button" onclick="toggleForm(4)">Cerrar</button>
-        </form>
-      </div>
-    </div>    
-
-  <title>Formulario de Contacto</title>********
-  <link rel="stylesheet" href="styles.css"> <!-- Tu archivo CSS -->
+  <script>
+    // Función para mostrar/ocultar el formulario de contacto
+    function toggleContactForm() {
+      var form = document.getElementById("contact-form");
+      // Cambia la visibilidad del formulario de contacto
+      if (form.style.display === "none") {
+        form.style.display = "block"; // Muestra el formulario
+      } else {
+        form.style.display = "none"; // Oculta el formulario
+      }
+    }
+  </script>
 </head>
+
 <body>
-  
+  <!-- Botones de navegación -->
+  <a class="btn-a" href="#" onclick="toggleContactForm()">Contacto</a>
+
+  <!-- Formulario de contacto (inicialmente oculto) -->
+  <div id="contact-form" style="display: none;">
+    <p>Déjanos tus datos para que podamos contactarte:</p>
+    <form id="formulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required><br><br>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" required><br><br>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" required></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Otros enlaces -->
   <a class="btn-a" href="a">Personajes</a>
-  <a class="btn-a" href="a">Contacto</a>
 
-  <p>Déjanos tus datos para que podamos contactarte:</p>
-  
-  <form id="formulario">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" required><br><br>
-
-    <label for="correo">Correo electrónico:</label>
-    <input type="email" id="correo" required><br><br>
-
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" required></textarea><br><br>
-
-    <button type="submit">Enviar</button>
-  </form>
-
-  <script src="script.js"></script> 
+  <script src="script.js"></script> <!-- Tu archivo JS -->
  
     <!-- Header -->
     <header>
       <h1>Rick y Morty</h1>
     </header>
-  
+  </script>
+  <div class="filters">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name">
+    <label for="species">Especie:</label>
+    <select id="species" name="species">
+      <option value="all">Todos</option>
+      <option value="human">Humano</option>
+      <option value="alien">Alien</option>
+      <option value="robot">Robot</option>
+    </select>
+    <label for="status">Estado:</label>
+    <select id="status" name="status">
+      <option value="all">Todos</option>
+      <option value="alive">Vivo</option>
+      <option value="dead">Muerto</option>
+    </select>
+    <button id="apply-filters">Aplicar filtros</button>
+  </div>
     <!-- Main Content -->
     <main>
       <div id="character-list" class="character-list">
@@ -83,8 +91,31 @@
           <p>Especies: Humano</p>
           <p>Origen: Tierra (C-137)</p>
           <p>Género: Masculino</p>
-        </div>
-      </div>
+          <h1>Personaje: Rick Sanchez</h1>
+    <p id="resultado"></p>
+    <script>
+      const personaje = {
+        nombre: "Rick Sanchez",
+        especie: "Humano",
+        estado: "Vivo"
+      };
+
+      // Filtros
+      const nombreFiltro = "Rick";
+      const especieFiltro = "Humano";
+      const estadoFiltro = "Vivo";
+
+      // Aplicar filtros
+      if (
+        (nombreFiltro === "" || personaje.nombre.includes(nombreFiltro)) &&
+        (especieFiltro === "all" || personaje.especie.includes(especieFiltro)) &&
+        (estadoFiltro === "all" || personaje.estado.includes(estadoFiltro))
+      ) {
+        document.getElementById("resultado").innerHTML = "Personaje encontrado: " + personaje.nombre;
+      } else {
+        document.getElementById("resultado").innerHTML = "Personaje no encontrado";
+      }
+    </script>
   
       <!-- Otra tarjeta de personaje -->
       <div class="character-card">
@@ -601,7 +632,6 @@
       info.style.display = "none";
     }
   }
-</script>
 
 </body>
 </html>

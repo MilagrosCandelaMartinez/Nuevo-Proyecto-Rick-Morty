@@ -50,4 +50,34 @@ function toggleForm(index) {
     margin-top: 10px;
     display: none;
   }
-  
+  const applyFilters = document.querySelector('#apply-filters');
+const nameInput = document.querySelector('#name');
+const speciesSelect = document.querySelector('#species');
+const statusSelect = document.querySelector('#status');
+
+// Función para aplicar los filtros
+function applyFiltersFunction() {
+  const name = nameInput.value.toLowerCase();
+  const species = speciesSelect.value;
+  const status = statusSelect.value;
+
+  const characters = characterList.children;
+  for (let i = 0; i < characters.length; i++) {
+    const character = characters[i];
+    const characterName = character.querySelector('h2').textContent.toLowerCase();
+    const characterSpecies = character.querySelector('p:nth-child(2)').textContent;
+    const characterStatus = character.querySelector('p:nth-child(1)').textContent;
+
+    if (
+      (name === '' || characterName.includes(name)) &&
+      (species === 'all' || characterSpecies.includes(species)) &&
+      (status === 'all' || characterStatus.includes(status))
+    ) {
+      character.style.display = 'block';
+    } else {
+      character.style.display = 'none';
+    }
+  }
+}
+
+applyFilters.addEventListener('click', applyFiltersFunction);
